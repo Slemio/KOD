@@ -1,0 +1,73 @@
+В начале сообщения укажите тип, который описывает суть изменений:
+
+feat: Добавление новой функции.
+
+fix: Исправление ошибки.
+
+docs: Изменение в документации.
+
+style: Правки по стилю (форматирование, пробелы, запятые и т. д.).
+
+refactor: Рефакторинг кода без исправления ошибок или добавления нового функционала.
+
+perf: Оптимизация производительности.
+
+test: Добавление или обновление тестов.
+
+build: Изменения, касающиеся сборки проекта.
+
+ci: Настройка или изменение CI/CD.
+
+chore: Прочие задачи (например, изменения в .gitignore).
+
+revert: Откат предыдущего коммита.
+
+Пример:
+
+fix(auth): fix token validation issue
+
+Укажите область изменений
+
+auth: Авторизация и аутентификация.
+
+ui: Пользовательский интерфейс.
+
+api: Серверные или клиентские API.
+
+core: Основной функционал приложения.
+
+config: Файлы конфигурации.
+
+deps: Обновление зависимостей.
+
+tests: Модульные, интеграционные или e2e тесты.
+
+docs: Документация.
+
+db: Изменения в базе данных.
+
+build: Скрипты сборки или сборочные файлы.
+
+Пример:
+
+docs(readme): add installation instructions
+
+Напишите краткое описание
+
+UI: "Fix button display on small screens"
+
+API: "Add endpoint for file uploads"
+
+Core: "Optimize cost calculation logic"
+
+Docs: "Update project setup section"
+
+Tests: "Add e2e tests for login feature"
+
+Deps: "Upgrade dependencies to latest versions"
+
+Build: "Configure build to support new plugins"
+
+Пример:
+
+feat(auth): add support for Google OAuth
