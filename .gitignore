@@ -1,8 +1,0 @@
-# Папки для сборки проектов .NET
- bin/
- obj/
-
-# Настройки IDE(Visual Studio, Rider, VS code)
- /.vscode
- /.idea
- /.vs
