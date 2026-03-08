@@ -1,0 +1,14 @@
+C:\Users\ЗС\source\repos\№4\№4\bin\Debug\net10.0\№4.exe
+C:\Users\ЗС\source\repos\№4\№4\bin\Debug\net10.0\№4.deps.json
+C:\Users\ЗС\source\repos\№4\№4\bin\Debug\net10.0\№4.runtimeconfig.json
+C:\Users\ЗС\source\repos\№4\№4\bin\Debug\net10.0\№4.dll
+C:\Users\ЗС\source\repos\№4\№4\bin\Debug\net10.0\№4.pdb
+C:\Users\ЗС\source\repos\№4\№4\obj\Debug\net10.0\№4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ЗС\source\repos\№4\№4\obj\Debug\net10.0\№4.AssemblyInfoInputs.cache
+C:\Users\ЗС\source\repos\№4\№4\obj\Debug\net10.0\№4.AssemblyInfo.cs
+C:\Users\ЗС\source\repos\№4\№4\obj\Debug\net10.0\№4.csproj.CoreCompileInputs.cache
+C:\Users\ЗС\source\repos\№4\№4\obj\Debug\net10.0\№4.dll
+C:\Users\ЗС\source\repos\№4\№4\obj\Debug\net10.0\refint\№4.dll
+C:\Users\ЗС\source\repos\№4\№4\obj\Debug\net10.0\№4.pdb
+C:\Users\ЗС\source\repos\№4\№4\obj\Debug\net10.0\№4.genruntimeconfig.cache
+C:\Users\ЗС\source\repos\№4\№4\obj\Debug\net10.0\ref\№4.dll
