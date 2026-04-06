@@ -1,0 +1,16 @@
+﻿var a1 = new Animal();
+var a2 = new Animal("Мурка");
+var a3 = new Animal("Шарик");
+a1.Eat();
+a2.Eat();
+a3.Eat();
+var a = new Animal("Чип");
+a.MakeSound();
+a.Eat();
+a.Rest();
+var d = new Dog("Шарик");
+var c = new Cat("Мурка");
+var e = new Elephant("Дамбо");
+d.MakeSound();
+c.MakeSound();
+e.MakeSound();
