@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\u0417\u0421\\Desktop\\pazzle-portfolio\\course-2\\projects\\TestingPlatform\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{498A8E3F-C631-9508-B04F-8B0CE6F2A464}|TestingPlatform\\TestingPlatform.csproj|c:\\users\\\u0437\u0441\\desktop\\pazzle-portfolio\\course-2\\projects\\testingplatform\\testingplatform\\controllers\\answerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498A8E3F-C631-9508-B04F-8B0CE6F2A464}|TestingPlatform\\TestingPlatform.csproj|solutionrelative:testingplatform\\controllers\\answerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498A8E3F-C631-9508-B04F-8B0CE6F2A464}|TestingPlatform\\TestingPlatform.csproj|c:\\users\\\u0437\u0441\\desktop\\pazzle-portfolio\\course-2\\projects\\testingplatform\\testingplatform\\controllers\\questionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498A8E3F-C631-9508-B04F-8B0CE6F2A464}|TestingPlatform\\TestingPlatform.csproj|solutionrelative:testingplatform\\controllers\\questionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498A8E3F-C631-9508-B04F-8B0CE6F2A464}|TestingPlatform\\TestingPlatform.csproj|c:\\users\\\u0437\u0441\\desktop\\pazzle-portfolio\\course-2\\projects\\testingplatform\\testingplatform\\controllers\\testscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498A8E3F-C631-9508-B04F-8B0CE6F2A464}|TestingPlatform\\TestingPlatform.csproj|solutionrelative:testingplatform\\controllers\\testscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498A8E3F-C631-9508-B04F-8B0CE6F2A464}|TestingPlatform\\TestingPlatform.csproj|c:\\users\\\u0437\u0441\\desktop\\pazzle-portfolio\\course-2\\projects\\testingplatform\\testingplatform\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498A8E3F-C631-9508-B04F-8B0CE6F2A464}|TestingPlatform\\TestingPlatform.csproj|solutionrelative:testingplatform\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AnswersController.cs",
+              "DocumentMoniker": "C:\\Users\\\u0417\u0421\\Desktop\\pazzle-portfolio\\course-2\\projects\\TestingPlatform\\TestingPlatform\\Controllers\\AnswersController.cs",
+              "RelativeDocumentMoniker": "TestingPlatform\\Controllers\\AnswersController.cs",
+              "ToolTip": "C:\\Users\\\u0417\u0421\\Desktop\\pazzle-portfolio\\course-2\\projects\\TestingPlatform\\TestingPlatform\\Controllers\\AnswersController.cs",
+              "RelativeToolTip": "TestingPlatform\\Controllers\\AnswersController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwCsAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-17T10:34:47.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "QuestionsController.cs",
+              "DocumentMoniker": "C:\\Users\\\u0417\u0421\\Desktop\\pazzle-portfolio\\course-2\\projects\\TestingPlatform\\TestingPlatform\\Controllers\\QuestionsController.cs",
+              "RelativeDocumentMoniker": "TestingPlatform\\Controllers\\QuestionsController.cs",
+              "ToolTip": "C:\\Users\\\u0417\u0421\\Desktop\\pazzle-portfolio\\course-2\\projects\\TestingPlatform\\TestingPlatform\\Controllers\\QuestionsController.cs",
+              "RelativeToolTip": "TestingPlatform\\Controllers\\QuestionsController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAcwDEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-16T18:26:00.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TestsController.cs",
+              "DocumentMoniker": "C:\\Users\\\u0417\u0421\\Desktop\\pazzle-portfolio\\course-2\\projects\\TestingPlatform\\TestingPlatform\\Controllers\\TestsController.cs",
+              "RelativeDocumentMoniker": "TestingPlatform\\Controllers\\TestsController.cs",
+              "ToolTip": "C:\\Users\\\u0417\u0421\\Desktop\\pazzle-portfolio\\course-2\\projects\\TestingPlatform\\TestingPlatform\\Controllers\\TestsController.cs",
+              "RelativeToolTip": "TestingPlatform\\Controllers\\TestsController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA8wA0AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-16T18:25:38.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StudentsController.cs",
+              "DocumentMoniker": "C:\\Users\\\u0417\u0421\\Desktop\\pazzle-portfolio\\course-2\\projects\\TestingPlatform\\TestingPlatform\\Controllers\\StudentsController.cs",
+              "RelativeDocumentMoniker": "TestingPlatform\\Controllers\\StudentsController.cs",
+              "ToolTip": "C:\\Users\\\u0417\u0421\\Desktop\\pazzle-portfolio\\course-2\\projects\\TestingPlatform\\TestingPlatform\\Controllers\\StudentsController.cs",
+              "RelativeToolTip": "TestingPlatform\\Controllers\\StudentsController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAuwC0AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-16T17:47:06.256Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
