@@ -1,10 +1,12 @@
 ﻿using System.Text.Json.Serialization;
+using TestingPlatform.Enums;
 
 public class User
 {
     public int Id { get; set; }
 
     public string Login { get; set; }
+    public string PasswordHash {  get; set; }
 
     public string Email { get; set; }
 
@@ -21,9 +23,5 @@ public class User
     [JsonIgnore]
     public Student? Student { get; set; }
 }
-public enum UserRole
-{
-    Manager = 1,
-    Student = 2,
-}
+
 

@@ -149,4 +149,3 @@ C:\Users\ЗС\Desktop\pazzle-portfolio\course-2\projects\TestingPlatform\Testing
 C:\Users\ЗС\Desktop\pazzle-portfolio\course-2\projects\TestingPlatform\TestingPlatform\bin\Debug\net10.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\ЗС\Desktop\pazzle-portfolio\course-2\projects\TestingPlatform\TestingPlatform\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\ЗС\Desktop\pazzle-portfolio\course-2\projects\TestingPlatform\TestingPlatform\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\ЗС\Desktop\pazzle-portfolio\course-2\projects\TestingPlatform\TestingPlatform\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

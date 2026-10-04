@@ -17,5 +17,6 @@
 
         public List<Student> Students { get; set; }
 
+        public List<Test> Tests {  get; set; }
     }
 }
