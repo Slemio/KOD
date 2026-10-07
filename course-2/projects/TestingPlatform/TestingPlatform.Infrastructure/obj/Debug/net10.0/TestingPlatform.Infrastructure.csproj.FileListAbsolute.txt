@@ -1,0 +1,16 @@
+C:\Users\ЗС\Desktop\pazzle-portfolio\course-2\projects\TestingPlatform\TestingPlatform.Infrastructure\bin\Debug\net10.0\TestingPlatform.Infrastructure.deps.json
+C:\Users\ЗС\Desktop\pazzle-portfolio\course-2\projects\TestingPlatform\TestingPlatform.Infrastructure\bin\Debug\net10.0\TestingPlatform.Infrastructure.dll
+C:\Users\ЗС\Desktop\pazzle-portfolio\course-2\projects\TestingPlatform\TestingPlatform.Infrastructure\bin\Debug\net10.0\TestingPlatform.Infrastructure.pdb
+C:\Users\ЗС\Desktop\pazzle-portfolio\course-2\projects\TestingPlatform\TestingPlatform.Infrastructure\bin\Debug\net10.0\TestingPlatform.Domain.dll
+C:\Users\ЗС\Desktop\pazzle-portfolio\course-2\projects\TestingPlatform\TestingPlatform.Infrastructure\bin\Debug\net10.0\TestingPlatform.Domain.pdb
+C:\Users\ЗС\Desktop\pazzle-portfolio\course-2\projects\TestingPlatform\TestingPlatform.Infrastructure\obj\Debug\net10.0\TestingPlatform.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\ЗС\Desktop\pazzle-portfolio\course-2\projects\TestingPlatform\TestingPlatform.Infrastructure\obj\Debug\net10.0\TestingPlatform.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ЗС\Desktop\pazzle-portfolio\course-2\projects\TestingPlatform\TestingPlatform.Infrastructure\obj\Debug\net10.0\TestingPlatform.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\ЗС\Desktop\pazzle-portfolio\course-2\projects\TestingPlatform\TestingPlatform.Infrastructure\obj\Debug\net10.0\TestingPlatform.Infrastructure.AssemblyInfo.cs
+C:\Users\ЗС\Desktop\pazzle-portfolio\course-2\projects\TestingPlatform\TestingPlatform.Infrastructure\obj\Debug\net10.0\TestingPlatform.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\ЗС\Desktop\pazzle-portfolio\course-2\projects\TestingPlatform\TestingPlatform.Infrastructure\obj\Debug\net10.0\TestingPlatform.Infrastructure.sourcelink.json
+C:\Users\ЗС\Desktop\pazzle-portfolio\course-2\projects\TestingPlatform\TestingPlatform.Infrastructure\obj\Debug\net10.0\TestingP.870B73F8.Up2Date
+C:\Users\ЗС\Desktop\pazzle-portfolio\course-2\projects\TestingPlatform\TestingPlatform.Infrastructure\obj\Debug\net10.0\TestingPlatform.Infrastructure.dll
+C:\Users\ЗС\Desktop\pazzle-portfolio\course-2\projects\TestingPlatform\TestingPlatform.Infrastructure\obj\Debug\net10.0\refint\TestingPlatform.Infrastructure.dll
+C:\Users\ЗС\Desktop\pazzle-portfolio\course-2\projects\TestingPlatform\TestingPlatform.Infrastructure\obj\Debug\net10.0\TestingPlatform.Infrastructure.pdb
+C:\Users\ЗС\Desktop\pazzle-portfolio\course-2\projects\TestingPlatform\TestingPlatform.Infrastructure\obj\Debug\net10.0\ref\TestingPlatform.Infrastructure.dll

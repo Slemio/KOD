@@ -1,0 +1,12 @@
+C:\Users\ЗС\Desktop\pazzle-portfolio\course-2\projects\TestingPlatform\TestingPlatform.Domain\bin\Debug\net10.0\TestingPlatform.Domain.deps.json
+C:\Users\ЗС\Desktop\pazzle-portfolio\course-2\projects\TestingPlatform\TestingPlatform.Domain\bin\Debug\net10.0\TestingPlatform.Domain.dll
+C:\Users\ЗС\Desktop\pazzle-portfolio\course-2\projects\TestingPlatform\TestingPlatform.Domain\bin\Debug\net10.0\TestingPlatform.Domain.pdb
+C:\Users\ЗС\Desktop\pazzle-portfolio\course-2\projects\TestingPlatform\TestingPlatform.Domain\obj\Debug\net10.0\TestingPlatform.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ЗС\Desktop\pazzle-portfolio\course-2\projects\TestingPlatform\TestingPlatform.Domain\obj\Debug\net10.0\TestingPlatform.Domain.AssemblyInfoInputs.cache
+C:\Users\ЗС\Desktop\pazzle-portfolio\course-2\projects\TestingPlatform\TestingPlatform.Domain\obj\Debug\net10.0\TestingPlatform.Domain.AssemblyInfo.cs
+C:\Users\ЗС\Desktop\pazzle-portfolio\course-2\projects\TestingPlatform\TestingPlatform.Domain\obj\Debug\net10.0\TestingPlatform.Domain.csproj.CoreCompileInputs.cache
+C:\Users\ЗС\Desktop\pazzle-portfolio\course-2\projects\TestingPlatform\TestingPlatform.Domain\obj\Debug\net10.0\TestingPlatform.Domain.sourcelink.json
+C:\Users\ЗС\Desktop\pazzle-portfolio\course-2\projects\TestingPlatform\TestingPlatform.Domain\obj\Debug\net10.0\TestingPlatform.Domain.dll
+C:\Users\ЗС\Desktop\pazzle-portfolio\course-2\projects\TestingPlatform\TestingPlatform.Domain\obj\Debug\net10.0\refint\TestingPlatform.Domain.dll
+C:\Users\ЗС\Desktop\pazzle-portfolio\course-2\projects\TestingPlatform\TestingPlatform.Domain\obj\Debug\net10.0\TestingPlatform.Domain.pdb
+C:\Users\ЗС\Desktop\pazzle-portfolio\course-2\projects\TestingPlatform\TestingPlatform.Domain\obj\Debug\net10.0\ref\TestingPlatform.Domain.dll

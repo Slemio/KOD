@@ -900,6 +900,31 @@
         "build": {
           "buildTransitive/net8.0/_._": {}
         }
+      },
+      "TestingPlatform.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/TestingPlatform.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TestingPlatform.Domain.dll": {}
+        }
+      },
+      "TestingPlatform.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "10.0.12",
+          "Microsoft.EntityFrameworkCore.Relational": "10.0.12",
+          "TestingPlatform.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TestingPlatform.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TestingPlatform.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -2864,18 +2889,28 @@
         "system.composition.typedparts.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "TestingPlatform.Domain/1.0.0": {
+      "type": "project",
+      "path": "../TestingPlatform.Domain/TestingPlatform.Domain.csproj",
+      "msbuildProject": "../TestingPlatform.Domain/TestingPlatform.Domain.csproj"
+    },
+    "TestingPlatform.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../TestingPlatform.Infrastructure/TestingPlatform.Infrastructure.csproj",
+      "msbuildProject": "../TestingPlatform.Infrastructure/TestingPlatform.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
       "Microsoft.AspNetCore.OpenApi >= 10.0.12",
-      "Microsoft.EntityFrameworkCore >= 10.0.12",
       "Microsoft.EntityFrameworkCore.Design >= 10.0.12",
       "Microsoft.EntityFrameworkCore.Sqlite >= 10.0.12",
       "Swashbuckle.AspNetCore >= 10.2.3",
       "Swashbuckle.AspNetCore.Swagger >= 10.2.3",
       "Swashbuckle.AspNetCore.SwaggerGen >= 10.2.3",
-      "Swashbuckle.AspNetCore.SwaggerUI >= 10.2.3"
+      "Swashbuckle.AspNetCore.SwaggerUI >= 10.2.3",
+      "TestingPlatform.Infrastructure >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2885,9 +2920,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ЗС\\Desktop\\pazzle-portfolio\\course-2\\projects\\TestingPlatform\\TestingPlatform\\TestingPlatform.csproj",
-      "projectName": "TestingPlatform",
-      "projectPath": "C:\\Users\\ЗС\\Desktop\\pazzle-portfolio\\course-2\\projects\\TestingPlatform\\TestingPlatform\\TestingPlatform.csproj",
+      "projectUniqueName": "C:\\Users\\ЗС\\Desktop\\pazzle-portfolio\\course-2\\projects\\TestingPlatform\\TestingPlatform\\TestingPlatform.API.csproj",
+      "projectName": "TestingPlatform.API",
+      "projectPath": "C:\\Users\\ЗС\\Desktop\\pazzle-portfolio\\course-2\\projects\\TestingPlatform\\TestingPlatform\\TestingPlatform.API.csproj",
       "packagesPath": "C:\\Users\\ЗС\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\ЗС\\Desktop\\pazzle-portfolio\\course-2\\projects\\TestingPlatform\\TestingPlatform\\obj\\",
       "projectStyle": "PackageReference",
@@ -2910,7 +2945,11 @@
         "net10.0": {
           "framework": "net10.0",
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\ЗС\\Desktop\\pazzle-portfolio\\course-2\\projects\\TestingPlatform\\TestingPlatform.Infrastructure\\TestingPlatform.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\ЗС\\Desktop\\pazzle-portfolio\\course-2\\projects\\TestingPlatform\\TestingPlatform.Infrastructure\\TestingPlatform.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -2931,10 +2970,6 @@
         "targetAlias": "net10.0",
         "dependencies": {
           "Microsoft.AspNetCore.OpenApi": {
-            "target": "Package",
-            "version": "[10.0.12, )"
-          },
-          "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[10.0.12, )"
           },

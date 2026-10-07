@@ -563,6 +563,96 @@
   },
   "components": {
     "schemas": {
+      "Answer": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "text": {
+            "type": "string",
+            "nullable": true
+          },
+          "isCorrect": {
+            "type": "boolean"
+          },
+          "questionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "question": {
+            "$ref": "#/components/schemas/Question"
+          },
+          "userSelectedOptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserSelectedOption"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AnswerType": {
+        "enum": [
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "Attempt": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "startedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "submittedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "score": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "testId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "test": {
+            "$ref": "#/components/schemas/Test"
+          },
+          "studentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "student": {
+            "$ref": "#/components/schemas/Student"
+          },
+          "userAttemptAnswers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserAttemptAnswer"
+            },
+            "nullable": true
+          },
+          "testResults": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TestResult"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "Course": {
         "type": "object",
         "properties": {
@@ -578,6 +668,13 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/Group"
+            },
+            "nullable": true
+          },
+          "tests": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Test"
             },
             "nullable": true
           }
@@ -599,6 +696,13 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/Group"
+            },
+            "nullable": true
+          },
+          "tests": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Test"
             },
             "nullable": true
           }
@@ -643,6 +747,13 @@
               "$ref": "#/components/schemas/Student"
             },
             "nullable": true
+          },
+          "tests": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Test"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -664,6 +775,66 @@
               "$ref": "#/components/schemas/Group"
             },
             "nullable": true
+          },
+          "tests": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Test"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Question": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "text": {
+            "type": "string",
+            "nullable": true
+          },
+          "number": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "answerType": {
+            "$ref": "#/components/schemas/AnswerType"
+          },
+          "isScoring": {
+            "type": "boolean"
+          },
+          "maxScore": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "testId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "test": {
+            "$ref": "#/components/schemas/Test"
+          },
+          "userAttemptAnswers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserAttemptAnswer"
+            },
+            "nullable": true
+          },
+          "answers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Answer"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -677,6 +848,7 @@
           },
           "phone": {
             "type": "string",
+            "format": "tel",
             "nullable": true
           },
           "vkProfileLink": {
@@ -689,9 +861,187 @@
           },
           "user": {
             "$ref": "#/components/schemas/User"
+          },
+          "groups": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Group"
+            },
+            "nullable": true
+          },
+          "tests": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Test"
+            },
+            "nullable": true
+          },
+          "attempts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Attempt"
+            },
+            "nullable": true
+          },
+          "testResults": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TestResult"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
+      },
+      "Test": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "isRepeatable": {
+            "type": "boolean"
+          },
+          "type": {
+            "$ref": "#/components/schemas/TestType"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "publishedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "deadline": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "durationMinutes": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isPublic": {
+            "type": "boolean"
+          },
+          "passingScore": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "maxAttempts": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "questions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Question"
+            },
+            "nullable": true
+          },
+          "students": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Student"
+            },
+            "nullable": true
+          },
+          "projects": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Project"
+            },
+            "nullable": true
+          },
+          "courses": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Course"
+            },
+            "nullable": true
+          },
+          "groups": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Group"
+            },
+            "nullable": true
+          },
+          "directions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Direction"
+            },
+            "nullable": true
+          },
+          "attempts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Attempt"
+            },
+            "nullable": true
+          },
+          "testResults": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TestResult"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TestResult": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "passed": {
+            "type": "boolean"
+          },
+          "testId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "test": {
+            "$ref": "#/components/schemas/Test"
+          },
+          "attemptId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "attempt": {
+            "$ref": "#/components/schemas/Attempt"
+          },
+          "studentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "student": {
+            "$ref": "#/components/schemas/Student"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TestType": {
+        "enum": [
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
       },
       "User": {
         "type": "object",
@@ -701,6 +1051,10 @@
             "format": "int32"
           },
           "login": {
+            "type": "string",
+            "nullable": true
+          },
+          "passwordHash": {
             "type": "string",
             "nullable": true
           },
@@ -730,6 +1084,47 @@
         },
         "additionalProperties": false
       },
+      "UserAttemptAnswer": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isCorrect": {
+            "type": "boolean"
+          },
+          "scoreAwarded": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "attemptId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "attempt": {
+            "$ref": "#/components/schemas/Attempt"
+          },
+          "questionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "question": {
+            "$ref": "#/components/schemas/Question"
+          },
+          "userSelectedOptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserSelectedOption"
+            },
+            "nullable": true
+          },
+          "userTextAnswer": {
+            "$ref": "#/components/schemas/UserTextAnswer"
+          }
+        },
+        "additionalProperties": false
+      },
       "UserRole": {
         "enum": [
           1,
@@ -737,6 +1132,51 @@
         ],
         "type": "integer",
         "format": "int32"
+      },
+      "UserSelectedOption": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userAttemptAnswerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userAttemptAnswer": {
+            "$ref": "#/components/schemas/UserAttemptAnswer"
+          },
+          "answerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "answer": {
+            "$ref": "#/components/schemas/Answer"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserTextAnswer": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "textAnswer": {
+            "type": "string",
+            "nullable": true
+          },
+          "userAttemptAnswerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userAttemptAnswer": {
+            "$ref": "#/components/schemas/UserAttemptAnswer"
+          }
+        },
+        "additionalProperties": false
       }
     }
   },

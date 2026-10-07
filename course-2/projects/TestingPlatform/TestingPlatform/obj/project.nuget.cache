@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jT2oBOP8e3A=",
+  "dgSpecHash": "LmsHsD8UnZA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ЗС\\Desktop\\pazzle-portfolio\\course-2\\projects\\TestingPlatform\\TestingPlatform\\TestingPlatform.csproj",
+  "projectFilePath": "C:\\Users\\ЗС\\Desktop\\pazzle-portfolio\\course-2\\projects\\TestingPlatform\\TestingPlatform\\TestingPlatform.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ЗС\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\ЗС\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.12\\microsoft.aspnetcore.openapi.10.0.12.nupkg.sha512",
