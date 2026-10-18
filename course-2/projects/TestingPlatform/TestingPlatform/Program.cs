@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using TestingPlatform.Application.Interfaces;
 using TestingPlatform.Infrastructure.Data;
+using TestingPlatform.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,9 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IGroupRepository, GroupRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddAutoMapper(x => x.AddMaps("TestingPlatform.Infrastructure"));
 
 var app = builder.Build();
 

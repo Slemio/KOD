@@ -1,75 +1,50 @@
-﻿//using Microsoft.AspNetCore.Http;
-//using Microsoft.AspNetCore.Mvc;
-//using Microsoft.EntityFrameworkCore;
-//using TestingPlatform.Data;
-//using TestingPlatform.Models;
+﻿using Microsoft.AspNetCore.Mvc;
+using TestingPlatform.Application.Dtos;
+using TestingPlatform.Application.Interfaces;
+using TestingPlatform.Infrastructure.Data;
+using TestingPlatform.Infrastructure.Repositories;
+using TestingPlatform.Models;
 
-//namespace TestingPlatform.Controllers
-//{
-//    [Route("api/[controller]")]
-//    [ApiController]
-//    public class GroupController : ControllerBase
-//    {
-//        private readonly AppDbContext _db;
+[ApiController]
+[Route("api/[controller]")]
+public class GroupsController(IGroupRepository groupRepository) : ControllerBase
+{
+    [HttpGet]
+    public IActionResult GetAllGroups()
+    {
+        var groups = groupRepository.GetAll();
 
-//        public GroupController(AppDbContext db)
-//        {
-//            _db = db;
-//        }
+        return Ok(groups);
+    }
 
-//        [HttpGet]
-//        public IActionResult GetAllGroups()
-//        {
-//            var groups = _db.Groups.ToList();
-//            return Ok(groups); // 200
-//        }
+    [HttpGet("{id:int}")]
+    public IActionResult GetGroupById(int id)
+    {
+        var group = groupRepository.GetById(id);
 
-//        [HttpGet("{id:int}")]
-//        public IActionResult GetGroupById(int id)
-//        {
-//            if (id <= 0)
-//                return BadRequest("Некорректный id"); // 400
+        return Ok(group);
+    }
 
-//            var group = _db.Groups.FirstOrDefault(s => s.Id == id);
-//            if (group is null)
-//                return NotFound(); // 404
+    [HttpPost]
+    public IActionResult CreateGroup([FromBody] GroupDto group)
+    {
+        var id = groupRepository.Create(group);
 
-//            return Ok(group); // 200
-//        }
+        return StatusCode(StatusCodes.Status201Created, new { Id = id });
+    }
 
-//        [HttpPost]
-//        public IActionResult CreateGroup([FromBody] Group group)
-//        {
-//            _db.Groups.Add(group);
-//            _db.SaveChanges();
+    [HttpPut("{id:int}")]
+    public IActionResult UpdateGroup([FromBody] GroupDto group)
+    {
+        groupRepository.Update(group);
+        return NoContent();
+    }
 
-//            return Created();
-//        }
+    [HttpDelete("{id:int}")]
+    public IActionResult DeleteGroup(int id)
+    {
+        groupRepository.Delete(id);
 
-//        [HttpPut("{id:int}")]
-//        public IActionResult UpdateGroup([FromBody] Group group)
-//        {
-//            var exists = _db.Groups.FirstOrDefault(s => s.Id == group.Id);
-//            if (exists == default)
-//                return NotFound();
-
-//            _db.Entry(group).State = EntityState.Modified;
-//            _db.SaveChanges();
-
-//            return NoContent();
-//        }
-
-//        [HttpDelete("{id:int}")]
-//        public IActionResult DeleteGroup(int id)
-//        {
-//            var group = _db.Groups.Find(id);
-//            if (group is null)
-//                return NotFound();
-
-//            _db.Groups.Remove(group);
-//            _db.SaveChanges();
-
-//            return NoContent();
-//        }
-//    }
-//}
+        return NoContent();
+    }
+}

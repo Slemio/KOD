@@ -1,11 +1,30 @@
 {
   "version": 4,
   "targets": {
-    "net10.0": {}
+    "net10.0": {
+      "TestingPlatform.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/TestingPlatform.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TestingPlatform.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "TestingPlatform.Domain/1.0.0": {
+      "type": "project",
+      "path": "../TestingPlatform.Domain/TestingPlatform.Domain.csproj",
+      "msbuildProject": "../TestingPlatform.Domain/TestingPlatform.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net10.0": []
+    "net10.0": [
+      "TestingPlatform.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\ЗС\\.nuget\\packages\\": {},
@@ -39,7 +58,11 @@
         "net10.0": {
           "framework": "net10.0",
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\ЗС\\Desktop\\pazzle-portfolio\\course-2\\projects\\TestingPlatform\\TestingPlatform.Domain\\TestingPlatform.Domain.csproj": {
+              "projectPath": "C:\\Users\\ЗС\\Desktop\\pazzle-portfolio\\course-2\\projects\\TestingPlatform\\TestingPlatform.Domain\\TestingPlatform.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
