@@ -15,7 +15,7 @@ namespace TestingPlatform.Infrastructure.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "10.0.12");
+            modelBuilder.HasAnnotation("ProductVersion", "10.0.14");
 
             modelBuilder.Entity("CourseTest", b =>
                 {
@@ -153,7 +153,7 @@ namespace TestingPlatform.Infrastructure.Migrations
 
                     b.HasIndex("QuestionId");
 
-                    b.ToTable("Answer");
+                    b.ToTable("Answers");
                 });
 
             modelBuilder.Entity("TestingPlatform.Models.Attempt", b =>
@@ -366,7 +366,7 @@ namespace TestingPlatform.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Test");
+                    b.ToTable("Tests");
                 });
 
             modelBuilder.Entity("TestingPlatform.Models.TestResult", b =>

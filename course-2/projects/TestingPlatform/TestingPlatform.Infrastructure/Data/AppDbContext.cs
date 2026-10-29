@@ -10,6 +10,8 @@ namespace TestingPlatform.Infrastructure.Data
         public DbSet<Group> Groups => Set<Group>();
         public DbSet<Direction> Directions => Set<Direction>();
         public DbSet<Course> Courses => Set<Course>();
+        public DbSet<Test> Tests { get; set; }
+        public DbSet<Answer> Answers { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 

@@ -1,46 +1,52 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using TestingPlatform.API.Requests.Test;
+using TestingPlatform.API.Responses.Test;
+using TestingPlatform.Application.Dtos;
+using TestingPlatform.Application.Interfaces;
 
-namespace TestingPlatform.Controllers
+namespace TestingPlatform.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public class TestsController(ITestRepository testRepository, IMapper mapper) : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class TestsController : ControllerBase
+    [HttpGet]
+    public async Task<IActionResult> GetTests()
     {
-        [HttpGet]
-        public IActionResult GetAllTests() => Ok("Список тестов");
-
-        [HttpGet("{id}")]
-        public IActionResult GetTestById([FromRoute] int id)
-        {
-            if (id == 1)
-                return Ok("Тест 1");
-            return NotFound();
-        }
-
-        [HttpPost]
-        public IActionResult CreateTest() 
-        {
-            return Created("/api/tests/1", "Создан тест с ID=1");
-        }
-
-        [HttpPut("{id}")]
-        public IActionResult UpdateTest([FromRoute] int id)
-        {
-            if (id <= 0) return BadRequest("Неккоректный id");
-            if (id != 1) return NotFound();
-
-            return NoContent();
-        }
-
-        [HttpDelete("{id}")]
-        public IActionResult DeleteTest([FromRoute] int id)
-        {
-            if (id <= 0) return BadRequest("Неккоректный id");
-            if (id != 1) return NotFound();
-
-            return NoContent();
-        }
+        var tests = await testRepository.GetAllAsync();
+        return Ok(mapper.Map<IEnumerable<TestResponse>>(tests));
     }
 
+    [HttpGet("{id:int}")]
+    public async Task<IActionResult> GetTestById(int id)
+    {
+        var test = await testRepository.GetByIdAsync(id);
+        return Ok(mapper.Map<TestResponse>(test));
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> CreateTest([FromBody] CreateTestRequest request)
+    {
+        var testDto = mapper.Map<TestDto>(request);
+        var testId = await testRepository.CreateAsync(testDto);
+
+        return StatusCode(StatusCodes.Status201Created, new { Id = testId });
+    }
+
+    [HttpPut]
+    public async Task<IActionResult> UpdateTest([FromBody] UpdateTestRequest request)
+    {
+        var testDto = mapper.Map<TestDto>(request);
+        await testRepository.UpdateAsync(testDto);
+        return NoContent();
+    }
+
+    [HttpDelete("{id:int}")]
+    public async Task<IActionResult> DeleteTest(int id)
+    {
+        await testRepository.DeleteAsync(id);
+        return NoContent();
+    }
 }

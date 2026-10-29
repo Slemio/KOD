@@ -1,107 +1,104 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using TestingPlatform.Application.Dtos;
 using TestingPlatform.Application.Interfaces;
-using TestingPlatform.Infrastructure.Data;
 using TestingPlatform.Models;
+using TestingPlatform.Infrastructure.Data;
 
-namespace TestingPlatform.Infrastructure.Repositories
+namespace TestingPlatform.Infrastructure.Repositories;
+
+public class GroupRepository(AppDbContext appDbContext, IMapper mapper) : IGroupRepository
 {
-    public class GroupRepository(AppDbContext appDbContext, IMapper mapper) : IGroupRepository
+    public async Task<List<GroupDto>> GetAllAsync()
     {
-        public List<GroupDto> GetAll()
-        {
-            var groups = appDbContext.Groups
-                .Include(g => g.Project)
-                .Include(g => g.Direction)
-                .Include(g => g.Course)
-                .Include(g => g.Students)
-                .AsNoTracking()
-                .ToList();
+        var groups = await appDbContext.Groups
+            .Include(g => g.Project)
+            .Include(g => g.Direction)
+            .Include(g => g.Course)
+            .Include(g => g.Students)
+            .AsNoTracking()
+            .ToListAsync();
 
-            return mapper.Map<List<GroupDto>>(groups);
-        }
-
-        public GroupDto GetById(int id)
-        {
-            var group = appDbContext.Groups
-                .Include(g => g.Project)
-                .Include(g => g.Course)
-                .Include(g => g.Direction)
-                .AsNoTracking()
-                .FirstOrDefault(group => group.Id == id);
-
-            if (group == null)
-            {
-                throw new Exception("Группа не найдена.");
-            }
-
-            return mapper.Map<GroupDto>(group);
-        }
-
-        public int Create(GroupDto groupDto)
-        {
-            var group = mapper.Map<Group>(groupDto);
-
-            var direction = appDbContext.Directions.FirstOrDefault(d => d.Id == groupDto.Direction.Id);
-            if (direction is null)
-            {
-                throw new Exception("Направление не найдено.");
-            }
-            group.Direction = direction;
-
-            var course = appDbContext.Courses.FirstOrDefault(c => c.Id == groupDto.Course.Id);
-            if (course is null)
-            {
-                throw new Exception("Курс не найден.");
-            }
-            group.Course = course;
-
-            var project = appDbContext.Projects.FirstOrDefault(p => p.Id == groupDto.Project.Id);
-            if (project is null)
-            {
-                throw new Exception("Проект не найден.");
-            }
-            group.Project = project;
-
-            var groupId = appDbContext.Add(group);
-            appDbContext.SaveChanges();
-
-            return groupId.Entity.Id;
-        }
-
-        public void Update(GroupDto groupDto)
-        {
-            var group = appDbContext.Groups.FirstOrDefault(group => group.Id == groupDto.Id);
-
-            if (group == null)
-            {
-                throw new Exception("Группа не найдена.");
-            }
-
-            group.Name = groupDto.Name;
-            group.CourseId = groupDto.Course.Id;
-            group.DirectionId = groupDto.Direction.Id;
-            group.ProjectId = groupDto.Project.Id;
-
-            appDbContext.SaveChanges();
-        }
-
-        public void Delete(int id)
-        {
-            var group = appDbContext.Groups.FirstOrDefault(group => group.Id == id);
-
-            if (group == null)
-            {
-                throw new Exception("Группа не найдена.");
-            }
-
-            appDbContext.Groups.Remove(group);
-            appDbContext.SaveChanges();
-        }
+        return mapper.Map<List<GroupDto>>(groups);
     }
 
+    public async Task<GroupDto> GetByIdAsync(int id)
+    {
+        var group = await appDbContext.Groups
+            .Include(g => g.Project)
+            .Include(g => g.Course)
+            .Include(g => g.Direction)
+            .AsNoTracking()
+            .FirstOrDefaultAsync(group => group.Id == id);
+
+        if (group == null)
+        {
+            throw new Exception("Группа не найдена.");
+        }
+
+        return mapper.Map<GroupDto>(group);
+    }
+
+
+    public async Task<int> CreateAsync(GroupDto groupDto)
+    {
+        var group = mapper.Map<Group>(groupDto);
+
+        var direction = await appDbContext.Directions.FirstOrDefaultAsync(d => d.Id == groupDto.directionDto.Id);
+        if (direction is null)
+        {
+            throw new Exception("Направление не найдено.");
+        }
+        group.Direction = direction;
+
+        var course = await appDbContext.Courses.FirstOrDefaultAsync(c => c.Id == groupDto.courseDto.Id);
+        if (course is null)
+        {
+            throw new Exception("Курс не найден.");
+        }
+        group.Course = course;
+
+        var project = await appDbContext.Projects.FirstOrDefaultAsync(p => p.Id == groupDto.projectDto.Id);
+        if (project is null)
+        {
+            throw new Exception("Проект не найден.");
+        }
+        group.Project = project;
+
+        var groupId = await appDbContext.AddAsync(group);
+        await appDbContext.SaveChangesAsync();
+
+        return groupId.Entity.Id;
+    }
+
+    public async Task UpdateAsync(GroupDto groupDto)
+    {
+        var group = await appDbContext.Groups.FirstOrDefaultAsync(group => group.Id == groupDto.Id);
+
+        if (group == null)
+        {
+            throw new Exception("Группа не найдена.");
+        }
+
+        group.Name = groupDto.Name;
+        group.CourseId = groupDto.courseDto.Id;
+        group.DirectionId = groupDto.directionDto.Id;
+        group.ProjectId = groupDto.projectDto.Id;
+
+        await appDbContext.SaveChangesAsync();
+    }
+
+    public async Task DeleteAsync(int id)
+    {
+        var group = await appDbContext.Groups.FirstOrDefaultAsync(group => group.Id == id);
+
+        if (group == null)
+        {
+            throw new Exception("Группа не найдена.");
+        }
+
+        appDbContext.Groups.Remove(group);
+        await appDbContext.SaveChangesAsync();
+    }
 }
+

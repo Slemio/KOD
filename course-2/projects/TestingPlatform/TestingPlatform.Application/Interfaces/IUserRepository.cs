@@ -1,19 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TestingPlatform.Application.Dtos;
 
 namespace TestingPlatform.Application.Interfaces
 {
     public interface IUserRepository
     {
-        List<User> GetAllAsync();
+        Task<IEnumerable<UserDto>> GetAllAsync();
 
-        User GetByIdAsync(int id);
+        Task<UserDto> GetByIdAsync(int id);
 
-        int CreateAsync(User user);
+        Task<int> CreateAsync(UserDto user);
 
-        void UpdateAsync(User user);
+        Task UpdateAsync(UserDto user);
 
-        void DeleteAsync(int id);
+        Task DeleteAsync(int id);
     }
 }

@@ -751,11 +751,17 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[10.0.12, )"
+              "version": "[10.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.14, )"
             },
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
-              "version": "[10.0.12, )"
+              "version": "[10.0.14, )"
             }
           },
           "imports": [
@@ -1081,6 +1087,12 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
+              "C:\\Users\\ЗС\\Desktop\\pazzle-portfolio\\course-2\\projects\\TestingPlatform\\TestingPlatform.Application\\TestingPlatform.Application.csproj": {
+                "projectPath": "C:\\Users\\ЗС\\Desktop\\pazzle-portfolio\\course-2\\projects\\TestingPlatform\\TestingPlatform.Application\\TestingPlatform.Application.csproj"
+              },
+              "C:\\Users\\ЗС\\Desktop\\pazzle-portfolio\\course-2\\projects\\TestingPlatform\\TestingPlatform.Domain\\TestingPlatform.Domain.csproj": {
+                "projectPath": "C:\\Users\\ЗС\\Desktop\\pazzle-portfolio\\course-2\\projects\\TestingPlatform\\TestingPlatform.Domain\\TestingPlatform.Domain.csproj"
+              },
               "C:\\Users\\ЗС\\Desktop\\pazzle-portfolio\\course-2\\projects\\TestingPlatform\\TestingPlatform.Infrastructure\\TestingPlatform.Infrastructure.csproj": {
                 "projectPath": "C:\\Users\\ЗС\\Desktop\\pazzle-portfolio\\course-2\\projects\\TestingPlatform\\TestingPlatform.Infrastructure\\TestingPlatform.Infrastructure.csproj"
               }
@@ -1110,33 +1122,33 @@
             },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[10.0.12, )"
+              "version": "[10.0.14, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[10.0.12, )"
+              "version": "[10.0.14, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
-              "version": "[10.0.12, )"
+              "version": "[10.0.14, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[10.2.3, )"
+              "version": "[10.3.1, )"
             },
             "Swashbuckle.AspNetCore.Swagger": {
               "target": "Package",
-              "version": "[10.2.3, )"
+              "version": "[10.3.1, )"
             },
             "Swashbuckle.AspNetCore.SwaggerGen": {
               "target": "Package",
-              "version": "[10.2.3, )"
+              "version": "[10.3.1, )"
             },
             "Swashbuckle.AspNetCore.SwaggerUI": {
               "target": "Package",
-              "version": "[10.2.3, )"
+              "version": "[10.3.1, )"
             }
           },
           "imports": [
